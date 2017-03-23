@@ -2,8 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-
-
+# Create your models here.
 class Feira(models.Model):
     id = models.IntegerField(default=0, null=False, primary_key=True, blank=False)
     long = models.IntegerField(default=0, null=True, blank=True)
@@ -23,6 +22,5 @@ class Feira(models.Model):
     bairro = models.CharField(null=True, max_length=50,blank=True)
     referencia = models.CharField(null=True, max_length=50,blank=True)
 
-    # class Meta:
-    #     app_label = 'api'
-    #     db_table = 'Feira'
+    class Meta:
+        db_table = 'feira'
