@@ -9,7 +9,7 @@ from feirapp.serializers import FeiraSerializer
 @csrf_exempt
 def feira_list(request):
     """
-    List all code snippets, or create a new snippet.
+    List all code feira, or create a new feira.
     """
     if request.method == 'GET':
         snippets = Feira.objects.all()
