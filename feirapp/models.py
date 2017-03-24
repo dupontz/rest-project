@@ -24,3 +24,6 @@ class Feira(models.Model):
 
     class Meta:
         db_table = 'feira'
+        app_label = 'feirapp'
+        managed = True
+
