@@ -8,6 +8,10 @@ def lower_first(iterator):
     return itertools.chain([next(iterator).lower()], iterator)
 
 def main():
+    """
+
+    :Import csv to database
+    """
     proj_path = "."
     # This is so Django knows where to find stuff.
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "feiraproject.settings")
