@@ -18,7 +18,7 @@ class Feira(models.Model):
     nome_feira = models.CharField(null=True, max_length=50,blank=True)
     registro = models.CharField(default='', max_length=6, blank=True)
     logradouro = models.CharField(null=True, max_length=50,blank=True)
-    numero = models.IntegerField(default=0, null=True, blank=True)
+    numero = models.CharField(default=0, max_length=10,null=True, blank=True)
     bairro = models.CharField(null=True, max_length=50,blank=True)
     referencia = models.CharField(null=True, max_length=50,blank=True)
 
