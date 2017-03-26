@@ -23,10 +23,8 @@ class Feira(models.Model):
     bairro = models.CharField(null=True, max_length=50, blank=True)
     referencia = models.CharField(null=True, max_length=50, blank=True)
 
-
-
-
     class Meta:
         db_table = 'feira'
         app_label = 'feirapp'
         managed = True
+
