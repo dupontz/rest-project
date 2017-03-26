@@ -1,2 +1,4 @@
 Django==1.10.6
 djangorestframework==3.6.2
+django-filter==1.0.2
+lettuce==0.2.23

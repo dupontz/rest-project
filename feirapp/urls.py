@@ -6,5 +6,5 @@ from models import Feira
 from feirapp.serializers import FeiraSerializer
 from feirapp import views
 urlpatterns = [
-    url(r'feira/$',views.FeiraList.as_view()),
+    url(r'feira/$',views.FeiraCreateList.as_view()),
 ]

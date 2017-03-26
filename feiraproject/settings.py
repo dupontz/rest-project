@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'feirapp',
     'rest_framework',
+    'lettuce.django',
 ]
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
