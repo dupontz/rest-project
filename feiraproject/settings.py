@@ -25,7 +25,7 @@ SECRET_KEY = 'eac1(fwar+9g2_%a_i2ez$wj@&benplcr2#gqe#wr+1gonelad'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'localhost', '127.0.0.1','testserver']
 
 
 # Application definition
@@ -45,7 +45,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
 
     ],
 'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
@@ -89,10 +89,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+
 }
-
-
+LETTUCE_USE_TEST_DATABASE = True
+# Nose
+#TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+# Lettuce
+#LETTUCE_SERVER_PORT = 9000
+LETTUCE_APPS = (
+    'feirapp',
+)
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
