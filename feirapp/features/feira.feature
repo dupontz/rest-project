@@ -12,9 +12,13 @@ Feature: Test rest-django Feira with lettuce
   And valida o retorno
 
   Scenario: Atualiza uma feira
-  Given uma determinada feira 'distrito'
+  Given uma determinada feira '1'
   When atualizo os campos:
     |distrito|regiao5|nome_feira|bairro|
     |update_distrito|update_regiao5|update_feira5|update_bairro
   Then o status do resultado for igual a '200'
 
+  Scenario: Deleto uma feira
+  Given uma determinada feira '1'
+  When eu deleto uma feira
+  Then o status do resultado for igual a '204'
