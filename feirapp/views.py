@@ -9,13 +9,17 @@ class FeiraCreateList(generics.ListCreateAPIView):
     GET: Opcionalmente restringe o resultado de feiras para `distrito`, `regiao5`,`nome_feira`,`bairro`
     POST: Cria uma instancia do objeto no banco de dados.
     """
-    # TODO melhoria filtro antes da query - sobrescrever metodo get_queryset
+    # TODO melhoria de filtro da query - sobrescrever metodo get_queryset
 
     queryset = Feira.objects.all()
     serializer = FeiraSerializer
     serializer_class = FeiraSerializer
     filter_fields = ('distrito', 'regiao5', 'nome_feira', 'bairro',)
-    logging.info('page_processor logging test')
+
+    def perform_create(self,serializer):
+        instance = serializer.save()
+        user = self.request.user
+        logging.info('ID={0} salvo com sucesso por {1}'.format(instance.id,user))
 
 class FeiraDestroy(generics.DestroyAPIView):
     """
@@ -25,8 +29,11 @@ class FeiraDestroy(generics.DestroyAPIView):
     queryset = Feira.objects.all()
     serializer = FeiraSerializer
     serializer_class = FeiraSerializer
-
-
+    def perform_destroy(self, serializer):
+        instance = serializer.save()
+        user = self.request.user
+        logging.info('ID={0} deletado com sucesso por {1}'.format(serializer.id,user) )
+   
 class FeiraUpdate(generics.UpdateAPIView):
     """
     /feira/update/(?P<pk>\d+)/
@@ -35,3 +42,9 @@ class FeiraUpdate(generics.UpdateAPIView):
     queryset = Feira.objects.all()
     serializer = FeiraSerializer
     serializer_class = FeiraSerializer
+
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        user = self.request.user
+        logging.info('ID={0} atualizado com sucesso por {1}'.format(instance.id,user))
+

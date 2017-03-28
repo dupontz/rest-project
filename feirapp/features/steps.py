@@ -40,7 +40,6 @@ def and_os_seguintes_resultados_devem_ser_retornados(step):
 def given_uma_determinada_feira_distrito(step, distrito):
     world.response = world.browser.get('/feira/',format='json')
     assert_equals(world.response.status_code, status.HTTP_200_OK)
-    #assert False, 'This step must be implemented'
 
 
 @step(u'When atualizo os campos:')
@@ -63,6 +62,6 @@ def when_eu_deleto_uma_feira(step):
 
     #renderiza response
     world.response = view(request, pk=world.response.data[0]['id'])
-    world.response.render()  # Cannot access `response.content` without this.HTTP_200_OK
+    world.response.render()
     # TODO - melhoria
     assert_equals(world.response.status_code, status.HTTP_204_NO_CONTENT)

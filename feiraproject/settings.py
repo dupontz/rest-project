@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,6 +23,7 @@ SECRET_KEY = 'eac1(fwar+9g2_%a_i2ez$wj@&benplcr2#gqe#wr+1gonelad'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
 
 ALLOWED_HOSTS = [ 'localhost', '127.0.0.1','testserver']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'feirapp',
     'rest_framework',
     'lettuce.django',
+
 ]
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -119,6 +120,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -151,7 +156,7 @@ LOGGING = {
     },
     'formatters': {
         'verbose': {
-            'format': '%(levelname)s|%(asctime)s|%(module)s|%(process)d|%(thread)d|%(message)s',
+            'format': '%(levelname)s|%(asctime)s|%(module)s|%(funcName)s|%(message)s',
             'datefmt': "%d/%b/%Y %H:%M:%S"
         },
         'simple': {
@@ -178,7 +183,7 @@ LOGGING = {
         'production_file': {
             'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename':  'log/info.log',
+            'filename':  'log/production.log',
             #'maxBytes': 1024*1024*5, # 5MB
             #'backupCount': 7,
             'formatter': 'verbose',
