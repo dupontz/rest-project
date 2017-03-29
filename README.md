@@ -1,3 +1,7 @@
+# Instalar dependencias
+
+    pip install -r requeriments.txt
+
 # Executar testes
 
 	python manage.py harvest --test-server --no-server
