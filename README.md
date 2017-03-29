@@ -19,7 +19,7 @@
 Request:
 
 
-	POST /feira/
+	POST /feira/?format=json
 
 
 Requet data:
@@ -71,8 +71,9 @@ Response data:
 
 Request:
 
-	GET /feira/
-        
+	GET /feira/?format=json
+    GET /feira/?distrito=(?P<distrito>\d+)&format=json
+    GET /feira/?distrito=(?P<distrito>\d+)&regiao5=(?P<regiao5>\d+)&nome_feira=(?P<nome_feira>\d+)&bairro=(?P<bairro>\d+)format=json
 Response status: 200
 
 Response data:
@@ -108,9 +109,9 @@ Response data:
 
 Request:
 
-	PUT /feira/update/(?P<pk>\d+)
+	PUT /feira/update/(?P<pk>\d+)/?format=json
 
-	PUT /feira/update/1
+	PUT /feira/update/1/?format=json
 
 Request data:
 ```
@@ -161,9 +162,9 @@ Response data:
 
 Request:
 
-	DELETE /feira/update/(?P<pk>\d+)
+	DELETE /feira/update/(?P<pk>\d+)/?format=json
 
-	DELETE /feira/update/1
+	DELETE /feira/update/1/?format=json
 
 Response Status: 204
 
