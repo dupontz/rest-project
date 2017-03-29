@@ -1,0 +1,6 @@
+WARNING|29/Mar/2017 00:15:28|base|create_parser|/home/dupont/apps/venv-appfeiras/local/lib/python2.7/site-packages/django/core/management/base.py:265: RemovedInDjango110Warning: OptionParser usage for Django management commands is deprecated, use ArgumentParser instead
+  RemovedInDjango110Warning)
+
+INFO|29/Mar/2017 00:15:29|views|perform_create|ID=1 salvo com sucesso por AnonymousUser
+INFO|29/Mar/2017 00:15:29|views|perform_update|ID=1 atualizado com sucesso por AnonymousUser
+INFO|29/Mar/2017 00:15:29|views|perform_destroy|ID=1 deletado com sucesso por AnonymousUser
