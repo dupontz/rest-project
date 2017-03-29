@@ -1,15 +1,16 @@
-# Script para carga de banco
-	python import_db.py
-
 # Executar testes
 
-	python manage.py harvest --test-server 
+	python manage.py harvest --test-server --no-server
 
 # Executar projeto 
 
 	python manage.py makemigrations 
 	python manage.py make
 	python manage.py runserver
+
+# Script para carga de banco
+	python import_db.py
+
 
 # Como usar a API
 
