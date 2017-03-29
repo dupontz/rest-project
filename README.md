@@ -4,8 +4,8 @@
 
 # Executar projeto 
 
-	python manage.py makemigrations 
-	python manage.py make
+	python manage.py makemigrations feirapp
+	python manage.py migrate
 	python manage.py runserver
 
 # Script para carga de banco
