@@ -73,7 +73,7 @@ Request:
 
 	GET /feira/?format=json
     GET /feira/?distrito=(?P<distrito>\d+)&format=json
-    GET /feira/?distrito=(?P<distrito>\d+)&regiao5=(?P<regiao5>\d+)&nome_feira=(?P<nome_feira>\d+)&bairro=(?P<bairro>\d+)format=json
+    GET /feira/?distrito=(?P<distrito>\d+)&regiao5=(?P<regiao5>\d+)&nome_feira=(?P<nome_feira>\d+)&bairro=(?P<bairro>\d+)&format=json
 Response status: 200
 
 Response data:
