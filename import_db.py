@@ -12,6 +12,8 @@ def main():
 
     :Import csv to database
     """
+
+    # Config para execucao de standalone herdando apps, framwork, e configuracoes do django
     proj_path = "."
     # This is so Django knows where to find stuff.
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "feiraproject.settings")
